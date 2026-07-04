@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pasindujayasinghe.com-app
+  name: pasindujayasinghe-com-app
   namespace: default
   labels:
-    app: pasindujayasinghe.com-app
+    app: pasindujayasinghe-com-app
 spec:
   replicas: 2
   strategy:
@@ -14,11 +14,11 @@ spec:
       maxUnavailable: 0
   selector:
     matchLabels:
-      app: pasindujayasinghe.com-app
+      app: pasindujayasinghe-com-app
   template:
     metadata:
       labels:
-        app: pasindujayasinghe.com-app
+        app: pasindujayasinghe-com-app
     spec:
       containers:
         - name: portfolio
@@ -64,7 +64,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pasindujayasinghe.com-app
+  name: pasindujayasinghe-com-app
   namespace: default
 spec:
   type: ClusterIP
@@ -73,4 +73,4 @@ spec:
       targetPort: 3000
       protocol: TCP
   selector:
-    app: pasindujayasinghe.com-app
+    app: pasindujayasinghe-com-app
