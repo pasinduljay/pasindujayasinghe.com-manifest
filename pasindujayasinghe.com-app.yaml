@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: portfolio
-          image: ghcr.io/pasinduljay/pasindujayasinghe.com:8902284
+          image: ghcr.io/pasinduljay/pasindujayasinghe.com:d695555
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
